@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/config/internal.dart';
 import 'package:flutter_application_1/model/request/customer_regis_post_req.dart';
 import 'package:flutter_application_1/pages/login.dart';
 import 'package:http/http.dart' as http;
@@ -166,7 +167,7 @@ class _RegisterPageState extends State<RegisterPage> {
     );
     http
         .post(
-          Uri.parse("http://192.168.0.247:3000/customers"),
+          Uri.parse("$API_ENDPOINT/customers"),
           headers: {"Content-Type": "application/json; charset=utf-8"},
           body: customerRegisterPostRequestToJson(req),
         )

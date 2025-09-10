@@ -79,6 +79,9 @@ class _TripPageState extends State<TripPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(tripGetResponse.detail),
                 ),
+                Center(
+                  child: FilledButton(onPressed: () {}, child: Text('จองเลย')),
+                ),
               ],
             ),
           );
